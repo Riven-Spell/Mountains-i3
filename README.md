@@ -9,4 +9,4 @@ Required applications:
 - `i3blocks`
 - `xfce4-terminal`
 
-![alt text]()
+![alt text](https://github.com/Virepri/dotfiles-i3/blob/master/sf.png "Example")
