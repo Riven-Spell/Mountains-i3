@@ -1,0 +1,5 @@
+rofi.color-enabled: true
+rofi.color-window: argb: EE273238, argb: EE273238, argb: EE1e2529
+rofi.color-normal: argb: EE273238, argb: EEc1c1c1, argb: EE273238, argb: EE394249, argb: eeffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
