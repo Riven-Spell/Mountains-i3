@@ -1,3 +1,4 @@
-AURUPDATES=$(checkupdates-aur | wc -l)
-ADRUPDATES=$(checkpudates | wc -l)
-echo "AUR: $AURUPDATES ARCH: $ADRUPDATES"
+echo "password" | sudo -S pacman -Sy
+UPDATES=$(pacaur -Qu | wc -l)
+ADRUPDATES=
+echo ":$UPDATES"
