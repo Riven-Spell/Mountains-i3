@@ -1,4 +1,4 @@
-#Virepri's dotfiles
+# Virepri's dotfiles
 Required applications:
 - `lightdm`
 - `lightdm-webkit2-greeter`
