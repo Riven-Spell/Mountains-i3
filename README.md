@@ -10,8 +10,7 @@ Required applications:
 - `xfce4-terminal`
 - `checkupdates-aur`
 - `imgur-screenshot`
-- `ckb` If you have a corsair keyboard
 - `feh`
 - `pactl`
 
-![alt text](https://github.com/Virepri/dotfiles-i3/blob/master/sf.png "Example")
+![Showing off](https://github.com/Virepri/dotfiles-i3/blob/master/sf.png "Showing off")

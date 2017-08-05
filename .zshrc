@@ -51,8 +51,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
+plugins=(git golang thefuck)
 
 # User configuration
 
@@ -90,8 +89,17 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
+#alias gitkraken="screen gitkraken.sh"
 alias ytdl="youtube-dl --extract-audio --audio-format mp3 "
 export DEVKITPRO="/opt/devkitPro"
 export DEVKITARM="$DEVKITPRO/devkitARM"
 export PATH="$PATH:$DEVKITARM/bin:$HOME/bin"
 alias cp="cp -r"
+alias sgp="source $HOME/bin/sgp.sh"
+alias mkgo="source $HOME/bin/mkgo.sh"
+alias flashergo="sleep 3 && cat /home/adele/.config/i3/pass | sudo -S dfu-util -D left_kiibohd.dfu.bin"
+eval $(thefuck --alias)
+export EDITOR="vim"
+export ZLE_RPROMPT_INDENT=0
+export RUST_BACKTRACE=full
+export ANDROID_HOME=/opt/android-sdk

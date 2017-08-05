@@ -102,7 +102,7 @@ set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
-set $ws7 "7"
+set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
@@ -183,8 +183,9 @@ bar {
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	position top
 	workspace_buttons yes
-	height 15
-	colors {
+	height 20
+	font pango:RobotoMono Nerd Font Medium 8
+	Colors {
 		background $bg-color
 		separator #757575
 		#border             background         text
@@ -198,9 +199,9 @@ bar {
 bindsym $mod+shift+l exec /home/adele/.lock.sh -s -b
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -215,10 +216,19 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-exec ckb
-exec compton
+bindsym $mod+l exec imgur-screenshot
+bindsym $mod+apostrophe exec transset-df -m 0.61 -x 0.61
 
-exec_always feh --bg-scale /home/adele/Pictures/wallpaper.jpg
+bindsym $mod+equal exec cmus-remote -v +5%
+bindsym $mod+minus exec cmus-remote -v -5%
+
+exec ckb -b #Back in my day when I wanted fancy arr gee bee I'd use this but now I ergodox
+exec compton #get your pretty transparency and shadows
+exec nm-applet #Easy VPN connecting (and wifi for codeday)
+exec autokey-gtk #Norwegian typing
+exec plover #Stenography software
+
+exec_always feh --bg-fill /home/adele/Pictures/wallpapers/panda.jpg
 
 gaps inner 20
 gaps outer 5
@@ -232,3 +242,4 @@ assign [class="GitKraken"] $ws4
 assign [class="Steam"] $ws5
 assign [class="Code"] $ws6 
 assign [class="Codeblocks"] $ws6
+assign [class="Deluge"] $ws7
